@@ -1,0 +1,61 @@
+.header {
+    padding-top: 26px;
+    padding-bottom: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+    .menu-wrapper {
+        .menu {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            .menu-link {
+                text-decoration: none;
+                font-size: 16px;
+                line-height: 20.11px;
+                color: $mainColor;
+                font-weight: 400;
+                position: relative;
+                &:hover, &.active {
+                    font-weight: 700;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 3px;
+                        background-color: #46A358;
+                        display: block;
+                        bottom: -26px;
+                    }
+                }
+            }
+        }
+    }
+    .actions-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        .btn {
+            display: flex;
+            align-items: center;
+            > .badge {
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 10px;
+                font-weight: 500;
+                top: 0;
+                left: 50%;
+                translate: 5px -15%;
+            }
+        }
+    }
+}
